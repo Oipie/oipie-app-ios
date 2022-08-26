@@ -41,7 +41,7 @@ class MainTabBarController: UITabBarController {
     }
 
     var customTabBar: TabNavigationMenu!
-    var tabBarHeight: CGFloat = 67.0
+    var tabBarHeight: CGFloat = 116.0
 
     func loadTabBar() {
         let tabItems: [TabItem] = [.home, .search, .favourites, .doneRecepies, .profile]

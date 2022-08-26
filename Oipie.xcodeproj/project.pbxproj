@@ -19,7 +19,6 @@
 		A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAB28B920D300B7A665 /* MainTabBarController.swift */; };
 		A4645DB028B9246800B7A665 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAF28B9246800B7A665 /* TabBarItem.swift */; };
 		A4645DB228B925C300B7A665 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */; };
-		A4645DB428B9280000B7A665 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DB328B9280000B7A665 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		A4645DAB28B920D300B7A665 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A4645DAF28B9246800B7A665 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
-		A4645DB328B9280000B7A665 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 				A4645DAB28B920D300B7A665 /* MainTabBarController.swift */,
 				A4645DAF28B9246800B7A665 /* TabBarItem.swift */,
 				A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */,
-				A4645DB328B9280000B7A665 /* SearchViewController.swift */,
 			);
 			path = Oipie;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 			files = (
 				A4645D7E28B91EE600B7A665 /* HomeViewController.swift in Sources */,
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
-				A4645DB428B9280000B7A665 /* SearchViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
 				A4645DB028B9246800B7A665 /* TabBarItem.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,

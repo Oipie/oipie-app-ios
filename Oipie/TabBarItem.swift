@@ -19,13 +19,13 @@ enum TabItem: String, CaseIterable {
         case .home:
             return HomeViewController()
         case .search:
-            return HomeViewController()
-        case .favourites:
             return SearchViewController()
+        case .favourites:
+            return FavouritesViewController()
         case .doneRecepies:
-            return HomeViewController()
+            return DoneRecepiesViewController()
         case .profile:
-            return HomeViewController()
+            return ProfileViewController()
         }
     }
 
