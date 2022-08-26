@@ -5,11 +5,10 @@
 //  Created by Daniel Ramos on 26/8/22.
 //
 
-import XCTest
 @testable import Oipie
+import XCTest
 
 class OipieTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -28,9 +27,8 @@ class OipieTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

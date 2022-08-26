@@ -8,7 +8,6 @@
 import XCTest
 
 class OipieUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
