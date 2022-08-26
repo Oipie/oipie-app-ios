@@ -21,26 +21,26 @@ class TabNavigationMenu: UIView {
 
     convenience init(_ menuItems: [TabItem], frame: CGRect) {
         self.init(frame: frame)
-        
-        self.layer.backgroundColor = UIColor.white.cgColor
+
+        layer.backgroundColor = UIColor.red.cgColor
         for i in 0 ..< menuItems.count {
             let itemWidth = self.frame.width / CGFloat(menuItems.count)
             let leadingAnchor = itemWidth * CGFloat(i)
-            
-            let itemView = self.createTabItem(item: menuItems[i])
+
+            let itemView = createTabItem(item: menuItems[i])
             itemView.translatesAutoresizingMaskIntoConstraints = false
             itemView.clipsToBounds = true
             itemView.tag = i
-        self.addSubview(itemView)
-        NSLayoutConstraint.activate([
-                itemView.heightAnchor.constraint(equalTo: self.heightAnchor),
+            addSubview(itemView)
+            NSLayoutConstraint.activate([
+                itemView.heightAnchor.constraint(equalTo: heightAnchor),
                 itemView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingAnchor),
-                itemView.topAnchor.constraint(equalTo: self.topAnchor),
+                itemView.topAnchor.constraint(equalTo: topAnchor),
             ])
         }
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
-        self.activateTab(tab: 0) // activate the first tab
+        setNeedsLayout()
+        layoutIfNeeded()
+        activateTab(tab: 0) // activate the first tab
     }
 
     func createTabItem(item: TabItem) -> UIView {
@@ -48,19 +48,21 @@ class TabNavigationMenu: UIView {
         let itemTitleLabel = UILabel(frame: CGRect.zero)
         let itemIconView = UIImageView(frame: CGRect.zero)
         itemTitleLabel.text = item.displayTitle
+        itemTitleLabel.textColor = .black
         itemTitleLabel.textAlignment = .center
         itemTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         itemTitleLabel.clipsToBounds = true
-        
+        itemTitleLabel.isHidden = true
+
         itemIconView.image = item.icon.withRenderingMode(.automatic)
         itemIconView.translatesAutoresizingMaskIntoConstraints = false
         itemIconView.clipsToBounds = true
-    tabBarItem.layer.backgroundColor = UIColor.white.cgColor
+        tabBarItem.layer.backgroundColor = UIColor.white.cgColor
         tabBarItem.addSubview(itemIconView)
         tabBarItem.addSubview(itemTitleLabel)
         tabBarItem.translatesAutoresizingMaskIntoConstraints = false
         tabBarItem.clipsToBounds = true
-    NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate([
             itemIconView.heightAnchor.constraint(equalToConstant: 25), // Fixed height for our tab item(25pts)
             itemIconView.widthAnchor.constraint(equalToConstant: 25), // Fixed width for our tab item icon
             itemIconView.centerXAnchor.constraint(equalTo: tabBarItem.centerXAnchor),
@@ -70,27 +72,27 @@ class TabNavigationMenu: UIView {
             itemTitleLabel.widthAnchor.constraint(equalTo: tabBarItem.widthAnchor), // Position label full width across tab bar item
             itemTitleLabel.topAnchor.constraint(equalTo: itemIconView.bottomAnchor, constant: 4), // Position title label 4pts below item icon
         ])
-    tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap))) // Each item should be able to trigger and action on tap
-    return tabBarItem
+        tabBarItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap))) // Each item should be able to trigger and action on tap
+        return tabBarItem
     }
 
     @objc func handleTap(_ sender: UIGestureRecognizer) {
-        self.switchTab(from: self.activeItem, to: sender.view!.tag)
+        switchTab(from: activeItem, to: sender.view!.tag)
     }
-    
+
     func switchTab(from: Int, to: Int) {
-        self.deactivateTab(tab: from)
-        self.activateTab(tab: to)
+        deactivateTab(tab: from)
+        activateTab(tab: to)
     }
-    
+
     func activateTab(tab: Int) {
-        let tabToActivate = self.subviews[tab]
+        let tabToActivate = subviews[tab]
         let borderWidth = tabToActivate.frame.size.width - 20
         let borderLayer = CALayer()
         borderLayer.backgroundColor = UIColor.green.cgColor
         borderLayer.name = "active border"
         borderLayer.frame = CGRect(x: 10, y: 0, width: borderWidth, height: 2)
-    DispatchQueue.main.async {
+        DispatchQueue.main.async {
             UIView.animate(withDuration: 0.8, delay: 0.0, options: [.curveEaseIn, .allowUserInteraction], animations: {
                 tabToActivate.layer.addSublayer(borderLayer)
                 tabToActivate.setNeedsLayout()
@@ -98,15 +100,15 @@ class TabNavigationMenu: UIView {
             })
             self.itemTapped?(tab)
         }
-        self.activeItem = tab
+        activeItem = tab
     }
-    
+
     func deactivateTab(tab: Int) {
-        let inactiveTab = self.subviews[tab]
-        let layersToRemove = inactiveTab.layer.sublayers!.filter({ $0.name == "active border" })
-    DispatchQueue.main.async {
+        let inactiveTab = subviews[tab]
+        let layersToRemove = inactiveTab.layer.sublayers!.filter { $0.name == "active border" }
+        DispatchQueue.main.async {
             UIView.animate(withDuration: 0.4, delay: 0.0, options: [.curveEaseIn, .allowUserInteraction], animations: {
-                layersToRemove.forEach({ $0.removeFromSuperlayer() })
+                layersToRemove.forEach { $0.removeFromSuperlayer() }
                 inactiveTab.setNeedsLayout()
                 inactiveTab.layoutIfNeeded()
             })

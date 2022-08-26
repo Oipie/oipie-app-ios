@@ -8,20 +8,23 @@
 import UIKit
 
 enum TabItem: String, CaseIterable {
-    case calls
-    case photos
-    case contacts
-    case messages
+    case home = "Home"
+    case search = "Search"
+    case favourites = "Favourites"
+    case doneRecepies = "Messages"
+    case profile = "Profile"
 
     var viewController: UIViewController {
         switch self {
-        case .calls:
+        case .home:
             return HomeViewController()
-        case .photos:
+        case .search:
             return HomeViewController()
-        case .contacts:
+        case .favourites:
             return SearchViewController()
-        case .messages:
+        case .doneRecepies:
+            return HomeViewController()
+        case .profile:
             return HomeViewController()
         }
     }
@@ -29,15 +32,16 @@ enum TabItem: String, CaseIterable {
     // these can be your icons
     var icon: UIImage {
         switch self {
-        case .calls:
-            return UIImage(systemName: "house")!
-
-        case .photos:
-            return UIImage(systemName: "house")!
-        case .contacts:
-            return UIImage(systemName: "house")!
-        case .messages:
-            return UIImage(systemName: "house")!
+        case .home:
+            return UIImage(named: "home")!
+        case .search:
+            return UIImage(named: "search")!
+        case .favourites:
+            return UIImage(named: "heart")!
+        case .doneRecepies:
+            return UIImage(named: "page-flip")!
+        case .profile:
+            return UIImage(named: "profile-circled")!
         }
     }
 
