@@ -118,12 +118,13 @@ class MainTabBarController: UITabBarController {
     func setViewControllers2(_ controllers: [UINavigationController], animated: Bool) {
         tabBar.isHidden = true
         
-        let customTabBar = UIView(frame: .zero)
+        let customTabBar = UIStackView(frame: .zero)
         customTabBar.backgroundColor = .white
         customTabBar.translatesAutoresizingMaskIntoConstraints = false
         customTabBar.clipsToBounds = true
         customTabBar.layer.cornerRadius = 45.0
         customTabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        customTabBar.distribution = .fillEqually
         
         view.addSubview(customTabBar)
         
@@ -140,22 +141,21 @@ class MainTabBarController: UITabBarController {
         let colors: [UIColor] = [.systemBlue, .systemRed, .systemPink, .systemGreen, .systemBrown]
 
         for i in 0 ..< controllers.count {
-            let customItem = UIView(frame: .zero)
+            let customItem = UIButton(frame: .zero)
             customItem.backgroundColor = colors[i]
-            customItem.translatesAutoresizingMaskIntoConstraints = false
-            customItem.clipsToBounds = true
+            customTabBar.addArrangedSubview(customItem)
             
-            let itemWidth = view.frame.width / 5.0
-            let leadingAnchor = itemWidth * CGFloat(i)
             
-            customTabBar.addSubview(customItem)
+            let image = UIImageView(image: controllers[i].tabBarItem.image)
+            image.translatesAutoresizingMaskIntoConstraints = false
+            image.layer.borderColor = CGColor(red: 255, green: 0, blue: 0, alpha: 1)
+            image.layer.borderWidth = 2.0
             
+            customItem.addSubview(image)
+
             NSLayoutConstraint.activate([
-                customItem.heightAnchor.constraint(equalTo: customTabBar.heightAnchor),
-                customItem.leadingAnchor.constraint(equalTo: customTabBar.leadingAnchor, constant: leadingAnchor),
-                customItem.widthAnchor.constraint(equalToConstant: itemWidth),
-                customItem.topAnchor.constraint(equalTo: customTabBar.topAnchor),
-                customItem.bottomAnchor.constraint(equalTo: customTabBar.bottomAnchor)
+                image.topAnchor.constraint(equalTo: customItem.topAnchor, constant: 31),
+                image.centerXAnchor.constraint(equalTo: customItem.centerXAnchor)
             ])
         }
         
