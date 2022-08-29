@@ -45,38 +45,6 @@ class MainTabBarController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    //var customTabBar: TabNavigationMenu!
-    //var tabBarHeight: CGFloat = 116.0
-
-    /*func loadTabBar() {
-        let tabItems: [TabItem] = [.home, .search, .favourites, .doneRecepies, .profile]
-
-        setupCustomTabMenu(tabItems)
-    }
-
-    func setupCustomTabMenu(_ items: [TabItem]) {
-        let frame = tabBar.frame
-
-        tabBar.isHidden = true
-        customTabBar = TabNavigationMenu(items, frame: frame)
-        customTabBar.translatesAutoresizingMaskIntoConstraints = false
-        customTabBar.clipsToBounds = true
-        customTabBar.itemTapped = changeTab
-        view.addSubview(customTabBar)
-        NSLayoutConstraint.activate([
-            customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
-            customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
-            customTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
-            customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight), // Fixed height for nav menu
-            customTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor),
-        ])
-        view.layoutIfNeeded() // important step
-    }
-
-    func changeTab(tab: Int) {
-        selectedIndex = tab
-    }*/
-
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError()
@@ -132,5 +100,4 @@ extension MainTabBarController: MainTabItemTouchable {
     func onTouch(index: Int) {
         selectedIndex = index
     }
-    
 }
