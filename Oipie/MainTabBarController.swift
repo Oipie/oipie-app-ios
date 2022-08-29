@@ -118,7 +118,7 @@ class MainTabBarController: UITabBarController {
     func setViewControllers2(_ controllers: [UINavigationController], animated: Bool) {
         tabBar.isHidden = true
         
-        let customTabBar = UIView(frame: tabBar.frame)
+        let customTabBar = UIView(frame: .zero)
         customTabBar.backgroundColor = .white
         customTabBar.translatesAutoresizingMaskIntoConstraints = false
         customTabBar.clipsToBounds = true
@@ -138,13 +138,14 @@ class MainTabBarController: UITabBarController {
         viewControllers = controllers
         
         let colors: [UIColor] = [.systemBlue, .systemRed, .systemPink, .systemGreen, .systemBrown]
+
         for i in 0 ..< controllers.count {
             let customItem = UIView(frame: .zero)
             customItem.backgroundColor = colors[i]
             customItem.translatesAutoresizingMaskIntoConstraints = false
             customItem.clipsToBounds = true
             
-            let itemWidth = customTabBar.frame.width / CGFloat(5)
+            let itemWidth = view.frame.width / 5.0
             let leadingAnchor = itemWidth * CGFloat(i)
             
             customTabBar.addSubview(customItem)
@@ -154,6 +155,7 @@ class MainTabBarController: UITabBarController {
                 customItem.leadingAnchor.constraint(equalTo: customTabBar.leadingAnchor, constant: leadingAnchor),
                 customItem.widthAnchor.constraint(equalToConstant: itemWidth),
                 customItem.topAnchor.constraint(equalTo: customTabBar.topAnchor),
+                customItem.bottomAnchor.constraint(equalTo: customTabBar.bottomAnchor)
             ])
         }
         
