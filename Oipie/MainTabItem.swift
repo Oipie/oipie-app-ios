@@ -8,28 +8,45 @@
 import UIKit
 
 class MainTabItem: UIButton {
+    let icon: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+    let label: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .black
+        label.textAlignment = .center
+        label.font = UIFont(name: "Montserrat-SemiBold", size: 10.0)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     convenience init(image: UIImage, title: String) {
         self.init(frame: .zero)
 
-        let image = UIImageView(image: image)
-        image.translatesAutoresizingMaskIntoConstraints = false
-
-        let label = UILabel(frame: .zero)
-        label.textColor = .black
+        icon.image = image
         label.text = title.uppercased()
-        label.textAlignment = .center
-        let font = UIFont(name: "Montserrat-SemiBold", size: 10.0)
-        label.font = font
-        label.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(label)
-        addSubview(image)
-
+        addSubview(icon)
+        
+        setIconConstriants()
+        setLabelConstriants()
+    }
+    
+    private func setIconConstriants() {
         NSLayoutConstraint.activate([
-            image.topAnchor.constraint(equalTo: topAnchor, constant: 31),
-            image.centerXAnchor.constraint(equalTo: centerXAnchor),
+            icon.topAnchor.constraint(equalTo: topAnchor, constant: 31),
+            icon.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+    }
+    
+    private func setLabelConstriants() {
+        NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.topAnchor.constraint(equalTo: image.bottomAnchor),
+            label.topAnchor.constraint(equalTo: icon.bottomAnchor)
         ])
     }
 }
