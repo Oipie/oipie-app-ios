@@ -45,10 +45,10 @@ class MainTabBarController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    var customTabBar: TabNavigationMenu!
-    var tabBarHeight: CGFloat = 116.0
+    //var customTabBar: TabNavigationMenu!
+    //var tabBarHeight: CGFloat = 116.0
 
-    func loadTabBar() {
+    /*func loadTabBar() {
         let tabItems: [TabItem] = [.home, .search, .favourites, .doneRecepies, .profile]
 
         setupCustomTabMenu(tabItems)
@@ -75,7 +75,7 @@ class MainTabBarController: UITabBarController {
 
     func changeTab(tab: Int) {
         selectedIndex = tab
-    }
+    }*/
 
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
@@ -113,6 +113,7 @@ class MainTabBarController: UITabBarController {
         tabBar.isHidden = true
 
         let mainTabBar = MainTabBar(controllers)
+        mainTabBar.delegate = self
 
         view.addSubview(mainTabBar)
 
@@ -125,4 +126,11 @@ class MainTabBarController: UITabBarController {
 
         viewControllers = controllers
     }
+}
+
+extension MainTabBarController: MainTabItemTouchable {
+    func onTouch(index: Int) {
+        selectedIndex = index
+    }
+    
 }

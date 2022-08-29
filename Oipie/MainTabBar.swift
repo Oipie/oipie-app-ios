@@ -8,6 +8,7 @@
 import UIKit
 
 class MainTabBar: UIStackView {
+    weak var delegate: MainTabItemTouchable?
     convenience init(_ controllers: [UIViewController]) {
         self.init(frame: .zero)
 
@@ -19,11 +20,19 @@ class MainTabBar: UIStackView {
         distribution = .fillEqually
 
         for i in 0 ..< controllers.count {
-            addArrangedSubview(MainTabItem(image: controllers[i].tabBarItem.image!, title: controllers[i].title ?? ""))
+            let tabItem: MainTabItem = MainTabItem(index: i, image: controllers[i].tabBarItem.image!, title: controllers[i].title ?? "")
+            tabItem.delegate = self
+            addArrangedSubview(tabItem)
         }
         
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 116.0),
         ])
+    }
+}
+
+extension MainTabBar: MainTabItemTouchable {
+    func onTouch(index: Int) {
+        self.delegate?.onTouch(index: index)
     }
 }

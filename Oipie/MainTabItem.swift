@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MainTabItemTouchable: AnyObject {
+    func onTouch(index: Int)
+}
+
 class MainTabItem: UIButton {
+    weak var delegate: MainTabItemTouchable?
+    
     let icon: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -23,17 +29,36 @@ class MainTabItem: UIButton {
         return label
     }()
     
-    convenience init(image: UIImage, title: String) {
+    let point: UIView = {
+        let block = UIView(frame: .zero)
+        block.backgroundColor = .black
+        block.layer.cornerRadius = 12
+        block.translatesAutoresizingMaskIntoConstraints = false
+        block.clipsToBounds = true
+        return block
+    }()
+    var index: Int = 0
+    
+    convenience init(index: Int ,image: UIImage, title: String) {
         self.init(frame: .zero)
+        self.addTarget(self, action: #selector(self.onClick(_:)), for: .touchUpInside)
+        self.index = index
 
         icon.image = image
         label.text = title.uppercased()
-
+        
+        
+        addSubview(point)
         addSubview(label)
         addSubview(icon)
         
         setIconConstriants()
         setLabelConstriants()
+        setPointConstriants()
+    }
+    
+    @objc private func onClick(_ sender: UIButton!){
+        delegate?.onTouch(index: index)
     }
     
     private func setIconConstriants() {
@@ -47,6 +72,15 @@ class MainTabItem: UIButton {
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
             label.topAnchor.constraint(equalTo: icon.bottomAnchor)
+        ])
+    }
+    
+    private func setPointConstriants() {
+        NSLayoutConstraint.activate([
+            point.centerXAnchor.constraint(equalTo: centerXAnchor),
+            point.bottomAnchor.constraint(equalTo: icon.topAnchor),
+            point.heightAnchor.constraint(equalToConstant: 10.0),
+            point.widthAnchor.constraint(equalToConstant: 10.0)
         ])
     }
 }
