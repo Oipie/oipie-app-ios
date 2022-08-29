@@ -14,17 +14,17 @@ class HomeViewController: UIViewController {
         title.textAlignment = .center
         return title
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBlue
         view.addSubview(label)
     }
-    
+
     override func viewDidLayoutSubviews() {
-        label.center = self.view.center
-        label.frame = self.view.bounds
+        label.center = view.center
+        label.frame = view.bounds
     }
 }
 
@@ -35,17 +35,17 @@ class SearchViewController: UIViewController {
         title.textAlignment = .center
         return title
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemRed
         view.addSubview(label)
     }
-    
+
     override func viewDidLayoutSubviews() {
-        label.center = self.view.center
-        label.frame = self.view.bounds
+        label.center = view.center
+        label.frame = view.bounds
     }
 }
 
@@ -56,17 +56,17 @@ class FavouritesViewController: UIViewController {
         title.textAlignment = .center
         return title
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemPink
         view.addSubview(label)
     }
-    
+
     override func viewDidLayoutSubviews() {
-        label.center = self.view.center
-        label.frame = self.view.bounds
+        label.center = view.center
+        label.frame = view.bounds
     }
 }
 
@@ -77,17 +77,17 @@ class DoneRecepiesViewController: UIViewController {
         title.textAlignment = .center
         return title
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemGreen
         view.addSubview(label)
     }
-    
+
     override func viewDidLayoutSubviews() {
-        label.center = self.view.center
-        label.frame = self.view.bounds
+        label.center = view.center
+        label.frame = view.bounds
     }
 }
 
@@ -98,16 +98,16 @@ class ProfileViewController: UIViewController {
         title.textAlignment = .center
         return title
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBrown
         view.addSubview(label)
     }
-    
+
     override func viewDidLayoutSubviews() {
-        label.center = self.view.center
-        label.frame = self.view.bounds
+        label.center = view.center
+        label.frame = view.bounds
     }
 }

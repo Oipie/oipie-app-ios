@@ -13,8 +13,6 @@ class MainTabBarController: UITabBarController {
     let favouritesViewController: FavouritesViewController
     let doneRecepiesViewController: DoneRecepiesViewController
     let profileViewController: ProfileViewController
-    
-    
 
     static func build() -> MainTabBarController {
         let homeViewController = HomeViewController()
@@ -99,81 +97,32 @@ class MainTabBarController: UITabBarController {
         vc4.tabBarItem.image = UIImage(named: "page-flip")
         vc5.tabBarItem.image = UIImage(named: "profile-circled")
 
-        
-        
         vc1.title = "Home"
         vc2.title = "Search"
         vc3.title = "Favourites"
-        vc4.title = "Done Recepies"
+        vc4.title = "My Recepies"
         vc5.title = "Profile"
 
         tabBar.backgroundColor = .white
         tabBar.tintColor = .black
 
         setViewControllers2([vc1, vc2, vc3, vc4, vc5], animated: true)
-
-        // loadTabBar()
     }
-    
-    func setViewControllers2(_ controllers: [UINavigationController], animated: Bool) {
+
+    func setViewControllers2(_ controllers: [UINavigationController], animated _: Bool) {
         tabBar.isHidden = true
-        
-        let customTabBar = UIStackView(frame: .zero)
-        customTabBar.backgroundColor = .white
-        customTabBar.translatesAutoresizingMaskIntoConstraints = false
-        customTabBar.clipsToBounds = true
-        customTabBar.layer.cornerRadius = 45.0
-        customTabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        customTabBar.distribution = .fillEqually
-        
-        view.addSubview(customTabBar)
-        
+
+        let mainTabBar = MainTabBar(controllers)
+
+        view.addSubview(mainTabBar)
+
         NSLayoutConstraint.activate([
-            customTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
-            customTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
-            customTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
-            customTabBar.heightAnchor.constraint(equalToConstant: 116.0), // Fixed height for nav menu
-            customTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor),
+            mainTabBar.leadingAnchor.constraint(equalTo: tabBar.leadingAnchor),
+            mainTabBar.trailingAnchor.constraint(equalTo: tabBar.trailingAnchor),
+            mainTabBar.widthAnchor.constraint(equalToConstant: tabBar.frame.width),
+            mainTabBar.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor),
         ])
-        
+
         viewControllers = controllers
-        
-        let colors: [UIColor] = [.systemBlue, .systemRed, .systemPink, .systemGreen, .systemBrown]
-
-        for i in 0 ..< controllers.count {
-            let customItem = UIButton(frame: .zero)
-            customItem.backgroundColor = colors[i]
-            customTabBar.addArrangedSubview(customItem)
-            
-            
-            let image = UIImageView(image: controllers[i].tabBarItem.image)
-            image.translatesAutoresizingMaskIntoConstraints = false
-            image.layer.borderColor = CGColor(red: 255, green: 0, blue: 0, alpha: 1)
-            image.layer.borderWidth = 2.0
-            
-            customItem.addSubview(image)
-
-            NSLayoutConstraint.activate([
-                image.topAnchor.constraint(equalTo: customItem.topAnchor, constant: 31),
-                image.centerXAnchor.constraint(equalTo: customItem.centerXAnchor)
-            ])
-        }
-        
-        /*
-        let customTabBar = UIView()
-        let height = 200.0
-        customTabBar.frame = CGRect(x: 0, y: view.bounds.height - height, width: view.bounds.width, height: height)
-
-        let rectShape = CAShapeLayer()
-        rectShape.bounds = customTabBar.frame
-        rectShape.position = customTabBar.center
-        rectShape.path = UIBezierPath(roundedRect: customTabBar.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 45, height: 45)).cgPath
-
-        customTabBar.layer.backgroundColor = UIColor.green.cgColor
-        customTabBar.layer.mask = rectShape
-        customTabBar.backgroundColor = .white
-        
-        view.addSubview(customTabBar)
-        viewControllers = controllers*/
     }
 }
