@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class HomeViewController: UIViewController {
+    static func build(_ resolver: Resolver) -> HomeViewController {
+        return HomeViewController()
+    }
+    
     let label: UILabel = {
         let title = UILabel()
-        title.text = "Home"
+        title.text = "Home View"
         title.textAlignment = .center
         return title
     }()

@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class ProfileViewController: UIViewController {
+    static func build(_ resolver: Resolver) -> ProfileViewController {
+        return ProfileViewController()
+    }
+    
     let label: UILabel = {
         let title = UILabel()
-        title.text = "Profile"
+        title.text = "Profile View"
         title.textAlignment = .center
         return title
     }()

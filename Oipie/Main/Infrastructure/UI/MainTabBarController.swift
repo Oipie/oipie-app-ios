@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class MainTabBarController: UITabBarController {
     let homeViewController: HomeViewController
@@ -14,12 +15,12 @@ class MainTabBarController: UITabBarController {
     let myRecepiesViewController: MyRecepiesViewController
     let profileViewController: ProfileViewController
 
-    static func build() -> MainTabBarController {
-        let homeViewController = HomeViewController()
-        let searchViewController = SearchViewController()
-        let favouritesViewController = FavouritesViewController()
-        let myRecepiesViewController = MyRecepiesViewController()
-        let profileViewController = ProfileViewController()
+    static func build(_ resolver: Resolver) -> MainTabBarController {
+        let homeViewController = resolver.resolve(HomeViewController.self)!
+        let searchViewController = resolver.resolve(SearchViewController.self)!
+        let favouritesViewController = resolver.resolve(FavouritesViewController.self)!
+        let myRecepiesViewController = resolver.resolve(MyRecepiesViewController.self)!
+        let profileViewController = resolver.resolve(ProfileViewController.self)!
 
         return MainTabBarController(
             homeViewController: homeViewController,

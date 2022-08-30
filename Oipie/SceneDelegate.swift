@@ -14,10 +14,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("[SceneDelegate] willConnectTo")
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let container = AppFactory.create()
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MainTabBarController.build()
+        window?.rootViewController = container.resolve(MainTabBarController.self)
         window?.makeKeyAndVisible()
     }
 

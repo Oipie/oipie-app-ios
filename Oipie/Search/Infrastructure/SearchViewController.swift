@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class SearchViewController: UIViewController {
+    static func build(_ resolver: Resolver) -> SearchViewController {
+        return SearchViewController()
+    }
+    
     let label: UILabel = {
         let title = UILabel()
-        title.text = "Search"
+        title.text = "Search View"
         title.textAlignment = .center
         return title
     }()

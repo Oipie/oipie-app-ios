@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class FavouritesViewController: UIViewController {
+    static func build(_ resolver: Resolver) -> FavouritesViewController {
+        return FavouritesViewController()
+    }
+    
     let label: UILabel = {
         let title = UILabel()
-        title.text = "Favourites"
+        title.text = "Favourites View"
         title.textAlignment = .center
         return title
     }()

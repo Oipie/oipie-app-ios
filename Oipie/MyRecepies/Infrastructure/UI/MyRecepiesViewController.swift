@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Swinject
 
 class MyRecepiesViewController: UIViewController {
+    static func build(_ resolver: Resolver) -> MyRecepiesViewController {
+        return MyRecepiesViewController()
+    }
+    
     let label: UILabel = {
         let title = UILabel()
-        title.text = "Done Recepies"
+        title.text = "MyRecepies View"
         title.textAlignment = .center
         return title
     }()
