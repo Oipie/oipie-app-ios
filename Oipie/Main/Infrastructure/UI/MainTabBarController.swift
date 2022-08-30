@@ -5,8 +5,8 @@
 //  Created by Daniel Ramos on 26/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class MainTabBarController: UITabBarController {
     let homeViewController: HomeViewController
@@ -98,7 +98,7 @@ class MainTabBarController: UITabBarController {
 }
 
 extension MainTabBarController: MainTabBarDelegate {
-    func tabBar(_ tabBar: MainTabBar, didSelect item: MainTabBarItem) {
+    func tabBar(_: MainTabBar, didSelect item: MainTabBarItem) {
         selectedIndex = item.index
     }
 }

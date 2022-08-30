@@ -5,14 +5,14 @@
 //  Created by Daniel Ramos on 30/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class SearchViewController: UIViewController {
-    static func build(_ resolver: Resolver) -> SearchViewController {
+    static func build(_: Resolver) -> SearchViewController {
         return SearchViewController()
     }
-    
+
     let label: UILabel = {
         let title = UILabel()
         title.text = "Search View"

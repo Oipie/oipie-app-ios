@@ -26,7 +26,11 @@ class MainTabBar: UIStackView {
         distribution = .fillEqually
 
         for i in 0 ..< controllers.count {
-            let tabItem = MainTabBarItem(index: i, image: controllers[i].tabBarItem.image!, title: controllers[i].title ?? "")
+            let tabItem = MainTabBarItem(
+                index: i,
+                image: controllers[i].tabBarItem.image!,
+                title: controllers[i].title ?? ""
+            )
 
             if i == 0 {
                 tabItem.setIsSelected()
@@ -46,7 +50,7 @@ class MainTabBar: UIStackView {
 extension MainTabBar: MainTabBarItemDelegate {
     func tabBarItem(didSelect item: MainTabBarItem) {
         item.setIsSelected()
-        
+
         items
             .filter { $0.index != item.index }
             .forEach { $0.setIsNotSelected() }

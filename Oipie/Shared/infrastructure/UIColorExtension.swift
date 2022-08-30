@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UIColor {
     class var themeViolet: UIColor {
         return UIColor(named: "Violet")!

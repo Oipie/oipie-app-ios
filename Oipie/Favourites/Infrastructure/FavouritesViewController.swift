@@ -5,14 +5,14 @@
 //  Created by Daniel Ramos on 30/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class FavouritesViewController: UIViewController {
-    static func build(_ resolver: Resolver) -> FavouritesViewController {
+    static func build(_: Resolver) -> FavouritesViewController {
         return FavouritesViewController()
     }
-    
+
     let label: UILabel = {
         let title = UILabel()
         title.text = "Favourites View"

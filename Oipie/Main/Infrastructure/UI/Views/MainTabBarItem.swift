@@ -47,7 +47,7 @@ class MainTabBarItem: UIButton {
     convenience init(index: Int, image: UIImage, title: String) {
         self.init(frame: .zero)
         self.index = index
-        self.accessibilityLabel = title
+        accessibilityLabel = title
 
         icon.image = image.withTintColor(.label)
         label.text = title.uppercased()
@@ -59,7 +59,7 @@ class MainTabBarItem: UIButton {
         setIconConstriants()
         setLabelConstriants()
         setPointConstriants()
-        
+
         addTarget(self, action: #selector(onClick(_:)), for: .touchUpInside)
     }
 
@@ -73,13 +73,16 @@ class MainTabBarItem: UIButton {
     }
 
     func setIsNotSelected() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.label.alpha = 0
-            self.point.alpha = 0
-        }) { _ in
-            self.label.isHidden = true
-            self.point.isHidden = true
-        }
+        UIView.animate(
+            withDuration: 0.3, animations: {
+                self.label.alpha = 0
+                self.point.alpha = 0
+            },
+            completion: { _ in
+                self.label.isHidden = true
+                self.point.isHidden = true
+            }
+        )
     }
 
     @objc private func onClick(_: UIButton!) {

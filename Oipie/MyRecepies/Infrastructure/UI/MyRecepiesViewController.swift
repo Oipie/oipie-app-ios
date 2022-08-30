@@ -5,14 +5,14 @@
 //  Created by Daniel Ramos on 30/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class MyRecepiesViewController: UIViewController {
-    static func build(_ resolver: Resolver) -> MyRecepiesViewController {
+    static func build(_: Resolver) -> MyRecepiesViewController {
         return MyRecepiesViewController()
     }
-    
+
     let label: UILabel = {
         let title = UILabel()
         title.text = "MyRecepies View"

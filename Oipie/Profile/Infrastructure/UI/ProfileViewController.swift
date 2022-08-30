@@ -5,14 +5,14 @@
 //  Created by Daniel Ramos on 30/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class ProfileViewController: UIViewController {
-    static func build(_ resolver: Resolver) -> ProfileViewController {
+    static func build(_: Resolver) -> ProfileViewController {
         return ProfileViewController()
     }
-    
+
     let label: UILabel = {
         let title = UILabel()
         title.text = "Profile View"

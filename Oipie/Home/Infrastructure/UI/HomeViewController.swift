@@ -5,14 +5,14 @@
 //  Created by Daniel Ramos on 30/8/22.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class HomeViewController: UIViewController {
-    static func build(_ resolver: Resolver) -> HomeViewController {
+    static func build(_: Resolver) -> HomeViewController {
         return HomeViewController()
     }
-    
+
     let label: UILabel = {
         let title = UILabel()
         title.text = "Home View"
