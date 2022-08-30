@@ -11,12 +11,6 @@ protocol MainTabItemTouchable: AnyObject {
     func onTouch(index: Int)
 }
 
-extension UIColor {
-    class var themeViolet: UIColor {
-        return UIColor(named: "Violet")!
-    }
-}
-
 class MainTabItem: UIButton {
     weak var delegate: MainTabItemTouchable?
 

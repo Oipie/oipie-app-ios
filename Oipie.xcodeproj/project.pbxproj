@@ -22,6 +22,7 @@
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
+		CABE897528BDF70700EC9277 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE897428BDF70700EC9277 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		CABE897428BDF70700EC9277 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */,
 				CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */,
 				CA9FA80F28BCD28500942E23 /* MainTabItem.swift */,
+				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
 			);
 			path = Oipie;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
 				CA9FA81028BCD28500942E23 /* MainTabItem.swift in Sources */,
+				CABE897528BDF70700EC9277 /* UIColorExtension.swift in Sources */,
 				A4645DB228B925C300B7A665 /* TabNavigationMenu.swift in Sources */,
 				A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */,
 			);
