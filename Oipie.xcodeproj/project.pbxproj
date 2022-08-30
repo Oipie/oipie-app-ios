@@ -68,6 +68,8 @@
 		A4645DD228BE075700B7A665 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A4645DD728BE080E00B7A665 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMatchers.swift; sourceTree = "<group>"; };
+		A4645DE228BE450E00B7A665 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A4645DE328BE453500B7A665 /* TECH_DEBT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TECH_DEBT.md; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -108,6 +110,8 @@
 				A4645D7828B91EE600B7A665 /* Oipie */,
 				A4645D8F28B91EE800B7A665 /* OipieTests */,
 				A4645D9928B91EE800B7A665 /* OipieUITests */,
+				A4645DE228BE450E00B7A665 /* README.md */,
+				A4645DE328BE453500B7A665 /* TECH_DEBT.md */,
 				A4645D7728B91EE600B7A665 /* Products */,
 			);
 			sourceTree = "<group>";
