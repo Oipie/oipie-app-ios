@@ -29,10 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set Xcode version
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: "13.2"
+      # - name: Set Xcode version
+      #   uses: maxim-lobanov/setup-xcode@v1
+      #   with:
+      #     xcode-version: "13.2"
       - name: Set Default Scheme
         run: |
           rm Oipie.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
