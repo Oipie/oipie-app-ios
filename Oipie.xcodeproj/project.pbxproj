@@ -12,8 +12,7 @@
 		A4645D8328B91EE800B7A665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4645D8228B91EE800B7A665 /* Assets.xcassets */; };
 		A4645D8628B91EE800B7A665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4645D8428B91EE800B7A665 /* LaunchScreen.storyboard */; };
 		A4645D9128B91EE800B7A665 /* OipieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9028B91EE800B7A665 /* OipieTests.swift */; };
-		A4645D9B28B91EE800B7A665 /* OipieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9A28B91EE800B7A665 /* OipieUITests.swift */; };
-		A4645D9D28B91EE800B7A665 /* OipieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */; };
+		A4645D9B28B91EE800B7A665 /* MainNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */; };
 		A4645DAA28B91F3A00B7A665 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DA928B91F3A00B7A665 /* main.swift */; };
 		A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAB28B920D300B7A665 /* MainTabBarController.swift */; };
 		A4645DCB28BE06A100B7A665 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DCA28BE06A100B7A665 /* HomeViewController.swift */; };
@@ -56,8 +55,7 @@
 		A4645D8C28B91EE800B7A665 /* OipieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OipieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4645D9028B91EE800B7A665 /* OipieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OipieTests.swift; sourceTree = "<group>"; };
 		A4645D9628B91EE800B7A665 /* OipieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OipieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4645D9A28B91EE800B7A665 /* OipieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OipieUITests.swift; sourceTree = "<group>"; };
-		A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OipieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationTests.swift; sourceTree = "<group>"; };
 		A4645DA928B91F3A00B7A665 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A4645DAB28B920D300B7A665 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		A4645DCA28BE06A100B7A665 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +147,7 @@
 		A4645D9928B91EE800B7A665 /* OipieUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A4645D9A28B91EE800B7A665 /* OipieUITests.swift */,
-				A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */,
+				A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */,
 			);
 			path = OipieUITests;
 			sourceTree = "<group>";
@@ -500,8 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4645D9B28B91EE800B7A665 /* OipieUITests.swift in Sources */,
-				A4645D9D28B91EE800B7A665 /* OipieUITestsLaunchTests.swift in Sources */,
+				A4645D9B28B91EE800B7A665 /* MainNavigationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Swinject
 class AppFactory {
     static func create() -> Container {
         let container = Container()
-        
+
         container.register(HomeViewController.self, factory: HomeViewController.build)
         container.register(SearchViewController.self, factory: SearchViewController.build)
         container.register(FavouritesViewController.self, factory: FavouritesViewController.build)
@@ -18,7 +18,7 @@ class AppFactory {
         container.register(ProfileViewController.self, factory: ProfileViewController.build)
         container.register(MainTabBarController.self, factory: MainTabBarController.build)
         container.register(MainTabBarController.self, factory: MainTabBarController.build)
-        
+
         return container
     }
 }

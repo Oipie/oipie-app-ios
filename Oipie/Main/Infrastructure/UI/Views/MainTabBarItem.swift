@@ -46,8 +46,8 @@ class MainTabBarItem: UIButton {
 
     convenience init(index: Int, image: UIImage, title: String) {
         self.init(frame: .zero)
-        addTarget(self, action: #selector(onClick(_:)), for: .touchUpInside)
         self.index = index
+        self.accessibilityLabel = title
 
         icon.image = image.withTintColor(.label)
         label.text = title.uppercased()
@@ -59,6 +59,8 @@ class MainTabBarItem: UIButton {
         setIconConstriants()
         setLabelConstriants()
         setPointConstriants()
+        
+        addTarget(self, action: #selector(onClick(_:)), for: .touchUpInside)
     }
 
     func setIsSelected() {
