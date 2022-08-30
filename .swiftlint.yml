@@ -1,0 +1,7 @@
+# These rules collides with swiftformat
+disabled_rules:
+  - opening_brace
+  - trailing_comma
+
+identifier_name:
+  min_length: 0
