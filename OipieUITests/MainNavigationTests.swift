@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Nimble
 
 class MainNavigationTests: XCTestCase {
     override func setUpWithError() throws {
@@ -17,7 +18,7 @@ class MainNavigationTests: XCTestCase {
         app.launch()
 
         app.buttons["Favourites"].tap()
-        
-        XCTAssertTrue(app.staticTexts["Favourites View"].exists, "Favourites view is not visible")
+
+        expect(app).to(haveText("Favourites View"))
     }
 }

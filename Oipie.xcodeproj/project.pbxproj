@@ -22,6 +22,9 @@
 		A4645DD328BE075700B7A665 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DD228BE075700B7A665 /* ProfileViewController.swift */; };
 		A4645DD628BE07F600B7A665 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DD528BE07F600B7A665 /* Swinject */; };
 		A4645DD828BE080E00B7A665 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DD728BE080E00B7A665 /* AppFactory.swift */; };
+		A4645DDB28BE0D9400B7A665 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DDA28BE0D9400B7A665 /* Nimble */; };
+		A4645DDE28BE0DA700B7A665 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DDD28BE0DA700B7A665 /* Nimble */; };
+		A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -64,6 +67,7 @@
 		A4645DD028BE071800B7A665 /* MyRecepiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecepiesViewController.swift; sourceTree = "<group>"; };
 		A4645DD228BE075700B7A665 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A4645DD728BE080E00B7A665 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMatchers.swift; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4645DDE28BE0DA700B7A665 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4645DDB28BE0D9400B7A665 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +153,7 @@
 		A4645D9928B91EE800B7A665 /* OipieUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A4645DDF28BE0E4000B7A665 /* utils */,
 				A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */,
 			);
 			path = OipieUITests;
@@ -324,6 +331,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A4645DDF28BE0E4000B7A665 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		CA9FA81128BCDF9E00942E23 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +384,9 @@
 				A4645D8E28B91EE800B7A665 /* PBXTargetDependency */,
 			);
 			name = OipieTests;
+			packageProductDependencies = (
+				A4645DDD28BE0DA700B7A665 /* Nimble */,
+			);
 			productName = OipieTests;
 			productReference = A4645D8C28B91EE800B7A665 /* OipieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -387,6 +405,9 @@
 				A4645D9828B91EE800B7A665 /* PBXTargetDependency */,
 			);
 			name = OipieUITests;
+			packageProductDependencies = (
+				A4645DDA28BE0D9400B7A665 /* Nimble */,
+			);
 			productName = OipieUITests;
 			productReference = A4645D9628B91EE800B7A665 /* OipieUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -425,6 +446,8 @@
 			mainGroup = A4645D6D28B91EE500B7A665;
 			packageReferences = (
 				A4645DD428BE07F600B7A665 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */,
+				A4645DDC28BE0DA700B7A665 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = A4645D7728B91EE600B7A665 /* Products */;
 			projectDirPath = "";
@@ -498,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4645D9B28B91EE800B7A665 /* MainNavigationTests.swift in Sources */,
+				A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +846,22 @@
 				version = 2.8.2;
 			};
 		};
+		A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.0.0;
+			};
+		};
+		A4645DDC28BE0DA700B7A665 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -829,6 +869,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4645DD428BE07F600B7A665 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		A4645DDA28BE0D9400B7A665 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		A4645DDD28BE0DA700B7A665 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

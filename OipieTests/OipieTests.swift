@@ -7,6 +7,7 @@
 
 @testable import Oipie
 import XCTest
+import Nimble
 
 class OipieTests: XCTestCase {
     override func setUpWithError() throws {
