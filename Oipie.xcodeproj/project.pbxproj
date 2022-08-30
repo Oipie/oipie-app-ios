@@ -17,8 +17,6 @@
 		A4645D9D28B91EE800B7A665 /* OipieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */; };
 		A4645DAA28B91F3A00B7A665 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DA928B91F3A00B7A665 /* main.swift */; };
 		A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAB28B920D300B7A665 /* MainTabBarController.swift */; };
-		A4645DB028B9246800B7A665 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAF28B9246800B7A665 /* TabBarItem.swift */; };
-		A4645DB228B925C300B7A665 /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -57,8 +55,6 @@
 		A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OipieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4645DA928B91F3A00B7A665 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A4645DAB28B920D300B7A665 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		A4645DAF28B9246800B7A665 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 				A4645D8728B91EE800B7A665 /* Info.plist */,
 				A4645DA928B91F3A00B7A665 /* main.swift */,
 				A4645DAB28B920D300B7A665 /* MainTabBarController.swift */,
-				A4645DAF28B9246800B7A665 /* TabBarItem.swift */,
-				A4645DB128B925C300B7A665 /* TabNavigationMenu.swift */,
 				CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */,
 				CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */,
 				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
@@ -290,12 +284,10 @@
 				A4645D7E28B91EE600B7A665 /* HomeViewController.swift in Sources */,
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
-				A4645DB028B9246800B7A665 /* TabBarItem.swift in Sources */,
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
 				CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */,
 				CABE897528BDF70700EC9277 /* UIColorExtension.swift in Sources */,
-				A4645DB228B925C300B7A665 /* TabNavigationMenu.swift in Sources */,
 				A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

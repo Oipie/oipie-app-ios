@@ -74,10 +74,10 @@ class MainTabBarController: UITabBarController {
         tabBar.backgroundColor = .white
         tabBar.tintColor = .black
 
-        setViewControllers2([vc1, vc2, vc3, vc4, vc5], animated: true)
+        setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
     }
 
-    func setViewControllers2(_ controllers: [UINavigationController], animated _: Bool) {
+    func setViewControllers(_ controllers: [UINavigationController], animated _: Bool) {
         tabBar.isHidden = true
 
         let mainTabBar = MainTabBar(controllers)
