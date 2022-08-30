@@ -96,8 +96,8 @@ class MainTabBarController: UITabBarController {
     }
 }
 
-extension MainTabBarController: MainTabItemTouchable {
-    func onTouch(index: Int) {
-        selectedIndex = index
+extension MainTabBarController: MainTabBarDelegate {
+    func tabBar(_ tabBar: MainTabBar, didSelect item: MainTabBarItem) {
+        selectedIndex = item.index
     }
 }

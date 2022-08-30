@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol MainTabItemTouchable: AnyObject {
-    func onTouch(index: Int)
+protocol MainTabBarItemDelegate: AnyObject {
+    func tabBarItem(didSelect item: MainTabBarItem)
 }
 
-class MainTabItem: UIButton {
-    weak var delegate: MainTabItemTouchable?
+class MainTabBarItem: UIButton {
+    weak var delegate: MainTabBarItemDelegate?
 
     let icon: UIImageView = {
         let image = UIImageView()
@@ -81,7 +81,7 @@ class MainTabItem: UIButton {
     }
 
     @objc private func onClick(_: UIButton!) {
-        delegate?.onTouch(index: index)
+        delegate?.tabBarItem(didSelect: self)
     }
 
     private func setIconConstriants() {
