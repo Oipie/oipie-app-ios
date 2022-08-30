@@ -11,21 +11,21 @@ class MainTabBarController: UITabBarController {
     let homeViewController: HomeViewController
     let searchViewController: SearchViewController
     let favouritesViewController: FavouritesViewController
-    let doneRecepiesViewController: DoneRecepiesViewController
+    let myRecepiesViewController: MyRecepiesViewController
     let profileViewController: ProfileViewController
 
     static func build() -> MainTabBarController {
         let homeViewController = HomeViewController()
         let searchViewController = SearchViewController()
         let favouritesViewController = FavouritesViewController()
-        let doneRecepiesViewController = DoneRecepiesViewController()
+        let myRecepiesViewController = MyRecepiesViewController()
         let profileViewController = ProfileViewController()
 
         return MainTabBarController(
             homeViewController: homeViewController,
             searchViewController: searchViewController,
             favouritesViewController: favouritesViewController,
-            doneRecepiesViewController: doneRecepiesViewController,
+            myRecepiesViewController: myRecepiesViewController,
             profileViewController: profileViewController
         )
     }
@@ -34,13 +34,13 @@ class MainTabBarController: UITabBarController {
         homeViewController: HomeViewController,
         searchViewController: SearchViewController,
         favouritesViewController: FavouritesViewController,
-        doneRecepiesViewController: DoneRecepiesViewController,
+        myRecepiesViewController: MyRecepiesViewController,
         profileViewController: ProfileViewController
     ) {
         self.homeViewController = homeViewController
         self.searchViewController = searchViewController
         self.favouritesViewController = favouritesViewController
-        self.doneRecepiesViewController = doneRecepiesViewController
+        self.myRecepiesViewController = myRecepiesViewController
         self.profileViewController = profileViewController
         super.init(nibName: nil, bundle: nil)
     }
@@ -56,7 +56,7 @@ class MainTabBarController: UITabBarController {
         let vc1 = UINavigationController(rootViewController: homeViewController)
         let vc2 = UINavigationController(rootViewController: searchViewController)
         let vc3 = UINavigationController(rootViewController: favouritesViewController)
-        let vc4 = UINavigationController(rootViewController: doneRecepiesViewController)
+        let vc4 = UINavigationController(rootViewController: myRecepiesViewController)
         let vc5 = UINavigationController(rootViewController: profileViewController)
 
         vc1.tabBarItem.image = UIImage(named: "home")

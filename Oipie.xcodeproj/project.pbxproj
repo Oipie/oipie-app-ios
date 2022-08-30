@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D7928B91EE600B7A665 /* AppDelegate.swift */; };
 		A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D7B28B91EE600B7A665 /* SceneDelegate.swift */; };
-		A4645D7E28B91EE600B7A665 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D7D28B91EE600B7A665 /* HomeViewController.swift */; };
 		A4645D8328B91EE800B7A665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4645D8228B91EE800B7A665 /* Assets.xcassets */; };
 		A4645D8628B91EE800B7A665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4645D8428B91EE800B7A665 /* LaunchScreen.storyboard */; };
 		A4645D9128B91EE800B7A665 /* OipieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9028B91EE800B7A665 /* OipieTests.swift */; };
@@ -17,6 +16,11 @@
 		A4645D9D28B91EE800B7A665 /* OipieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */; };
 		A4645DAA28B91F3A00B7A665 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DA928B91F3A00B7A665 /* main.swift */; };
 		A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DAB28B920D300B7A665 /* MainTabBarController.swift */; };
+		A4645DCB28BE06A100B7A665 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DCA28BE06A100B7A665 /* HomeViewController.swift */; };
+		A4645DCD28BE06EF00B7A665 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DCC28BE06EF00B7A665 /* SearchViewController.swift */; };
+		A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DCE28BE06FF00B7A665 /* FavouritesViewController.swift */; };
+		A4645DD128BE071800B7A665 /* MyRecepiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DD028BE071800B7A665 /* MyRecepiesViewController.swift */; };
+		A4645DD328BE075700B7A665 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DD228BE075700B7A665 /* ProfileViewController.swift */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -44,7 +48,6 @@
 		A4645D7628B91EE600B7A665 /* Oipie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oipie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4645D7928B91EE600B7A665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4645D7B28B91EE600B7A665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4645D7D28B91EE600B7A665 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4645D8228B91EE800B7A665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4645D8528B91EE800B7A665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4645D8728B91EE800B7A665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +58,11 @@
 		A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OipieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4645DA928B91F3A00B7A665 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A4645DAB28B920D300B7A665 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A4645DCA28BE06A100B7A665 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4645DCC28BE06EF00B7A665 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A4645DCE28BE06FF00B7A665 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A4645DD028BE071800B7A665 /* MyRecepiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecepiesViewController.swift; sourceTree = "<group>"; };
+		A4645DD228BE075700B7A665 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -109,18 +117,19 @@
 		A4645D7828B91EE600B7A665 /* Oipie */ = {
 			isa = PBXGroup;
 			children = (
-				CA9FA81128BCDF9E00942E23 /* Fonts */,
+				A4645DB828BE05C000B7A665 /* Home */,
+				A4645DB928BE05CB00B7A665 /* Search */,
+				A4645DBA28BE05D100B7A665 /* Favourites */,
+				A4645DBB28BE05DA00B7A665 /* MyRecepies */,
+				A4645DBC28BE05E400B7A665 /* Profile */,
+				A4645DB528BE056800B7A665 /* Main */,
+				A4645DB628BE058100B7A665 /* Shared */,
 				A4645D7928B91EE600B7A665 /* AppDelegate.swift */,
 				A4645D7B28B91EE600B7A665 /* SceneDelegate.swift */,
-				A4645D7D28B91EE600B7A665 /* HomeViewController.swift */,
 				A4645D8228B91EE800B7A665 /* Assets.xcassets */,
 				A4645D8428B91EE800B7A665 /* LaunchScreen.storyboard */,
 				A4645D8728B91EE800B7A665 /* Info.plist */,
 				A4645DA928B91F3A00B7A665 /* main.swift */,
-				A4645DAB28B920D300B7A665 /* MainTabBarController.swift */,
-				CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */,
-				CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */,
-				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
 			);
 			path = Oipie;
 			sourceTree = "<group>";
@@ -140,6 +149,177 @@
 				A4645D9C28B91EE800B7A665 /* OipieUITestsLaunchTests.swift */,
 			);
 			path = OipieUITests;
+			sourceTree = "<group>";
+		};
+		A4645DB528BE056800B7A665 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC728BE066400B7A665 /* Infrastructure */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4645DB628BE058100B7A665 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DB728BE059B00B7A665 /* infrastructure */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A4645DB728BE059B00B7A665 /* infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CA9FA81128BCDF9E00942E23 /* Fonts */,
+				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
+			);
+			path = infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DB828BE05C000B7A665 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DBD28BE062100B7A665 /* Infrastructure */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A4645DB928BE05CB00B7A665 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DBE28BE062800B7A665 /* Infrastructure */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A4645DBA28BE05D100B7A665 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DBF28BE062B00B7A665 /* Infrastructure */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		A4645DBB28BE05DA00B7A665 /* MyRecepies */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC028BE062E00B7A665 /* Infrastructure */,
+			);
+			path = MyRecepies;
+			sourceTree = "<group>";
+		};
+		A4645DBC28BE05E400B7A665 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC128BE063200B7A665 /* Infrastructure */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A4645DBD28BE062100B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC228BE063800B7A665 /* UI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DBE28BE062800B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC328BE064400B7A665 /* UI */,
+				A4645DCC28BE06EF00B7A665 /* SearchViewController.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DBF28BE062B00B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC428BE064700B7A665 /* UI */,
+				A4645DCE28BE06FF00B7A665 /* FavouritesViewController.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DC028BE062E00B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC528BE064A00B7A665 /* UI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DC128BE063200B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC628BE064D00B7A665 /* UI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DC228BE063800B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DCA28BE06A100B7A665 /* HomeViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC328BE064400B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC428BE064700B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC528BE064A00B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DD028BE071800B7A665 /* MyRecepiesViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC628BE064D00B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DD228BE075700B7A665 /* ProfileViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC728BE066400B7A665 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC828BE066B00B7A665 /* UI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A4645DC828BE066B00B7A665 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DC928BE067000B7A665 /* Views */,
+				A4645DAB28B920D300B7A665 /* MainTabBarController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A4645DC928BE067000B7A665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */,
+				CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CA9FA81128BCDF9E00942E23 /* Fonts */ = {
@@ -281,13 +461,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4645D7E28B91EE600B7A665 /* HomeViewController.swift in Sources */,
+				A4645DCD28BE06EF00B7A665 /* SearchViewController.swift in Sources */,
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
+				A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
+				A4645DCB28BE06A100B7A665 /* HomeViewController.swift in Sources */,
 				CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */,
 				CABE897528BDF70700EC9277 /* UIColorExtension.swift in Sources */,
+				A4645DD328BE075700B7A665 /* ProfileViewController.swift in Sources */,
+				A4645DD128BE071800B7A665 /* MyRecepiesViewController.swift in Sources */,
 				A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
