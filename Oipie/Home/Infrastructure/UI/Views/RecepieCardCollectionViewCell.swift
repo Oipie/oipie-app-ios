@@ -24,6 +24,8 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
         view.layer.cornerRadius = 40
         return view
     }()
+    
+    let cardInfoView = RecepieCardInfoView(frame: .zero)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,9 +35,11 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
         
         addSubview(content)
         content.frame = bounds
-        content.clipsToBounds = true
-
         content.addSubview(thumbnail)
+        
+        let cardInfoView = RecepieCardInfoView(frame: .zero)
+        
+        content.addSubview(cardInfoView)
 
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.17
@@ -46,7 +50,11 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
             thumbnail.leadingAnchor.constraint(equalTo: content.leadingAnchor),
             thumbnail.trailingAnchor.constraint(equalTo: content.trailingAnchor),
             thumbnail.topAnchor.constraint(equalTo: content.topAnchor),
-            thumbnail.heightAnchor.constraint(equalTo: thumbnail.widthAnchor)
+            thumbnail.heightAnchor.constraint(equalTo: thumbnail.widthAnchor),
+            cardInfoView.topAnchor.constraint(equalTo: content.bottomAnchor, constant: -100),
+            cardInfoView.bottomAnchor.constraint(equalTo: content.bottomAnchor),
+            cardInfoView.leadingAnchor.constraint(equalTo: content.leadingAnchor),
+            cardInfoView.trailingAnchor.constraint(equalTo: content.trailingAnchor),
         ])
     }
     

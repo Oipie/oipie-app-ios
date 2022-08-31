@@ -27,6 +27,8 @@
 		A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */; };
 		A4645DE628BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */; };
 		A4645DEB28BF648000B7A665 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DEA28BF648000B7A665 /* Kingfisher */; };
+		A4CDD35B28BF79B6007B3763 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35A28BF79B6007B3763 /* HomeTests.swift */; };
+		A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -73,6 +75,8 @@
 		A4645DE228BE450E00B7A665 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4645DE328BE453500B7A665 /* TECH_DEBT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TECH_DEBT.md; sourceTree = "<group>"; };
 		A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4CDD35A28BF79B6007B3763 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardInfoView.swift; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A4645DDF28BE0E4000B7A665 /* utils */,
+				A4CDD35A28BF79B6007B3763 /* HomeTests.swift */,
 				A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */,
 			);
 			path = OipieUITests;
@@ -352,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */,
+				A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
 				A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
+				A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */,
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
 				A4645DD828BE080E00B7A665 /* AppFactory.swift in Sources */,
@@ -541,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4645D9B28B91EE800B7A665 /* MainNavigationTests.swift in Sources */,
+				A4CDD35B28BF79B6007B3763 /* HomeTests.swift in Sources */,
 				A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
