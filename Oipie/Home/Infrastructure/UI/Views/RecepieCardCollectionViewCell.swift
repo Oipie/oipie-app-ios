@@ -61,4 +61,11 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
     required init(coder: NSCoder) {
         fatalError()
     }
+    
+    func configure(_ recepie: Recepie) {
+        cardInfoView.configure(recepie)
+        thumbnail.kf.setImage(with: URL(string: recepie.getCover()))
+        cardInfoView.layoutIfNeeded()
+        cardInfoView.layoutSubviews()
+    }
 }

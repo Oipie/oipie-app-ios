@@ -13,7 +13,7 @@ class RecepieCardInfoView: UIView {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Pumpkin Soup"
+        label.text = "Placeholder"
         label.layer.borderWidth = 1
         label.layer.borderColor = UIColor.green.cgColor
         return label
@@ -55,5 +55,11 @@ class RecepieCardInfoView: UIView {
     
     required init(coder: NSCoder) {
         fatalError()
+    }
+    
+    func configure(_ recepie: Recepie) {
+        label.text = recepie.getName()
+        label.layoutIfNeeded()
+        label.layoutSubviews()
     }
 }

@@ -29,6 +29,8 @@
 		A4645DEB28BF648000B7A665 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DEA28BF648000B7A665 /* Kingfisher */; };
 		A4CDD35B28BF79B6007B3763 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35A28BF79B6007B3763 /* HomeTests.swift */; };
 		A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */; };
+		A4CDD36028BF81B4007B3763 /* Recepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35F28BF81B4007B3763 /* Recepie.swift */; };
+		A4CDD36328BF822C007B3763 /* Recepies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD36228BF822C007B3763 /* Recepies.swift */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -77,6 +79,8 @@
 		A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4CDD35A28BF79B6007B3763 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardInfoView.swift; sourceTree = "<group>"; };
+		A4CDD35F28BF81B4007B3763 /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
+		A4CDD36228BF822C007B3763 /* Recepies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepies.swift; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -183,24 +187,26 @@
 		A4645DB628BE058100B7A665 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A4645DB728BE059B00B7A665 /* infrastructure */,
+				A4645DB728BE059B00B7A665 /* Infrastructure */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		A4645DB728BE059B00B7A665 /* infrastructure */ = {
+		A4645DB728BE059B00B7A665 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDD36128BF8220007B3763 /* Fixtures */,
 				CA9FA81128BCDF9E00942E23 /* Fonts */,
 				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
 				A4645DD728BE080E00B7A665 /* AppFactory.swift */,
 			);
-			path = infrastructure;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		A4645DB828BE05C000B7A665 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDD35E28BF81A7007B3763 /* Domain */,
 				A4645DBD28BE062100B7A665 /* Infrastructure */,
 			);
 			path = Home;
@@ -360,6 +366,22 @@
 				A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A4CDD35E28BF81A7007B3763 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDD35F28BF81B4007B3763 /* Recepie.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A4CDD36128BF8220007B3763 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDD36228BF822C007B3763 /* Recepies.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		CA9FA81128BCDF9E00942E23 /* Fonts */ = {
@@ -522,6 +544,7 @@
 				A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
 				A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */,
+				A4CDD36028BF81B4007B3763 /* Recepie.swift in Sources */,
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
 				A4645DD828BE080E00B7A665 /* AppFactory.swift in Sources */,
@@ -531,6 +554,7 @@
 				A4645DE628BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift in Sources */,
 				A4645DD328BE075700B7A665 /* ProfileViewController.swift in Sources */,
 				A4645DD128BE071800B7A665 /* MyRecepiesViewController.swift in Sources */,
+				A4CDD36328BF822C007B3763 /* Recepies.swift in Sources */,
 				A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

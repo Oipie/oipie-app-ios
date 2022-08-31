@@ -12,6 +12,11 @@ class HomeViewController: UIViewController {
     static func build(_: Resolver) -> HomeViewController {
         return HomeViewController()
     }
+    
+    let recepies: [Recepie] = [
+        Recepie(name: PUMPKIN_SOUP.name, cover: PUMPKIN_SOUP.cover),
+        Recepie(name: FRENCH_TOAST.name, cover: FRENCH_TOAST.cover),
+    ]
 
     let collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -42,7 +47,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return recepies.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,8 +57,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
+        cell.configure(self.recepies[indexPath.row])
+        
         return cell
     }
-    
-    
 }
