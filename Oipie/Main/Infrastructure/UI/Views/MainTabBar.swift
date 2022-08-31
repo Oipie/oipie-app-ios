@@ -20,7 +20,7 @@ class MainTabBar: UIStackView {
 
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
-        backgroundColor = .systemBackground
+        backgroundColor = .themeWhite
         layer.cornerRadius = 45.0
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         distribution = .fillEqually
