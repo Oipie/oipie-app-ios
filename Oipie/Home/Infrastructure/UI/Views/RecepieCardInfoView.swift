@@ -59,7 +59,5 @@ class RecepieCardInfoView: UIView {
     
     func configure(_ recepie: Recepie) {
         label.text = recepie.getName()
-        label.layoutIfNeeded()
-        label.layoutSubviews()
     }
 }
