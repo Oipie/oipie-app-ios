@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E85FA099-236C-4A4F-BC86-349545DEC8DE"
+            uuid = "571EBDC2-05BA-4A10-9936-B98E2D99171A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Oipie/Home/Infrastructure/UI/Views/RecepieCardCollectionViewCell.swift"
+            filePath = "Oipie/Shared/Infrastructure/Datasources/API/ApiClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "configure(_:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getRecepies(limit:offset:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6335A7B-F8F5-4747-8AA8-917D848C78D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oipie/Home/Infrastructure/Repositories/RecepieRepositoryFake.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "find(limit:offset:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -13,20 +13,7 @@ class HomeViewController: UIViewController {
         return HomeViewController()
     }
 
-    let recepies: [Recepie] = [
-        Recepie(
-            name: PUMPKIN_SOUP.name,
-            cover: PUMPKIN_SOUP.cover,
-            favouriteAmount: PUMPKIN_SOUP.favouriteAmount,
-            preparationTime: PUMPKIN_SOUP.preparationTimeSeconds
-        ),
-        Recepie(
-            name: FRENCH_TOAST.name,
-            cover: FRENCH_TOAST.cover,
-            favouriteAmount: FRENCH_TOAST.favouriteAmount,
-            preparationTime: FRENCH_TOAST.preparationTimeSeconds
-        ),
-    ]
+    var recepies: [Recepie] = []
 
     let collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -44,6 +31,8 @@ class HomeViewController: UIViewController {
         return collectionView
     }()
 
+    private var presenter: HomePresenter?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,16 +42,44 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
 
         view.addSubview(collection)
+
+        presenter?.loadRecepies()
+    }
+
+    public static func initCompleted(_ resolver: Resolver, _ homeViewController: HomeViewController) {
+        homeViewController.setPresenter(resolver.resolve(HomePresenter.self)!)
     }
 
     override func viewDidLayoutSubviews() {
         collection.frame = view.bounds
+    }
+
+    func setPresenter(_ presenter: HomePresenter) {
+        self.presenter = presenter
+    }
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func presentRecepies(_ recepies: [Recepie]) {
+        self.recepies = recepies
+
+        DispatchQueue.main.async {
+            self.collection.reloadData()
+        }
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return recepies.count
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        if offsetY > contentHeight - scrollView.frame.size.height {
+            print("this is end, see you in console")
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView,
