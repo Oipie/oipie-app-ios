@@ -36,9 +36,6 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
         addSubview(content)
         content.frame = bounds
         content.addSubview(thumbnail)
-        
-        let cardInfoView = RecepieCardInfoView(frame: .zero)
-        
         content.addSubview(cardInfoView)
 
         layer.shadowColor = UIColor.black.cgColor
@@ -51,7 +48,7 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
             thumbnail.trailingAnchor.constraint(equalTo: content.trailingAnchor),
             thumbnail.topAnchor.constraint(equalTo: content.topAnchor),
             thumbnail.heightAnchor.constraint(equalTo: thumbnail.widthAnchor),
-            cardInfoView.topAnchor.constraint(equalTo: content.bottomAnchor, constant: -100),
+            cardInfoView.topAnchor.constraint(equalTo: thumbnail.bottomAnchor),
             cardInfoView.bottomAnchor.constraint(equalTo: content.bottomAnchor),
             cardInfoView.leadingAnchor.constraint(equalTo: content.leadingAnchor),
             cardInfoView.trailingAnchor.constraint(equalTo: content.trailingAnchor),

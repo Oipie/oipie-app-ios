@@ -13,43 +13,53 @@ class RecepieCardInfoView: UIView {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Placeholder"
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.green.cgColor
+        label.font = UIFont(name: FontFamily.montserratSemiBold.rawValue, size: FontSize.medium.rawValue)
         return label
     }()
     
     let content: UIView = {
         let view = UIView()
-
         view.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor.systemBlue.cgColor
-        
-        view.backgroundColor = .yellow
-        
         return view
     }()
+    
+    let favouriteAndTimeContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let favouriteLabel = RecepieCardLabel()
+    let cookTimeLabel = RecepieCardLabel()
     
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.red.cgColor
-        
+        favouriteAndTimeContainer.addSubview(favouriteLabel)
+        favouriteAndTimeContainer.addSubview(cookTimeLabel)
         content.addSubview(label)
+        content.addSubview(favouriteAndTimeContainer)
+        self.addSubview(content)
         
-        addSubview(content)
+        // favouriteAndTimeContainer.backgroundColor = .systemYellow
+        // content.backgroundColor = .systemGreen
+        // self.backgroundColor = .gray
         
         NSLayoutConstraint.activate([
             content.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.leadingAnchor.constraint(equalTo: content.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: content.trailingAnchor),
-            label.topAnchor.constraint(equalTo: content.topAnchor),
-            label.bottomAnchor.constraint(equalTo: content.bottomAnchor)
+            content.centerYAnchor.constraint(equalTo: centerYAnchor),
+            content.topAnchor.constraint(equalTo: label.topAnchor),
+            content.bottomAnchor.constraint(equalTo: favouriteAndTimeContainer.bottomAnchor),
+            content.widthAnchor.constraint(equalTo: favouriteAndTimeContainer.widthAnchor),
+            label.centerXAnchor.constraint(equalTo: content.centerXAnchor),
+            favouriteAndTimeContainer.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 5),
+            favouriteAndTimeContainer.centerXAnchor.constraint(equalTo: content.centerXAnchor),
+            favouriteAndTimeContainer.heightAnchor.constraint(equalTo: favouriteLabel.heightAnchor),
+            favouriteAndTimeContainer.leadingAnchor.constraint(equalTo: favouriteLabel.leadingAnchor),
+            favouriteAndTimeContainer.trailingAnchor.constraint(equalTo: cookTimeLabel.trailingAnchor),
+            cookTimeLabel.leadingAnchor.constraint(equalTo: favouriteLabel.trailingAnchor, constant: 26)
         ])
     }
     
@@ -58,6 +68,6 @@ class RecepieCardInfoView: UIView {
     }
     
     func configure(_ recepie: Recepie) {
-        label.text = recepie.getName()
+        label.text = recepie.getName().uppercased()
     }
 }

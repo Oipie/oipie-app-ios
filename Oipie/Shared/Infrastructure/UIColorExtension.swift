@@ -20,3 +20,14 @@ extension UIColor {
         return UIColor(named: "White")!
     }
 }
+
+enum FontFamily: String {
+    case montserratSemiBold = "Montserrat-SemiBold"
+    case montserratRegular = "Montserrat-Regular"
+}
+
+enum FontSize: CGFloat {
+    case small = 10.0
+    case intermediate = 13.0
+    case medium = 16.0
+}

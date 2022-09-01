@@ -58,6 +58,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         cell.configure(self.recepies[indexPath.row])
+        cell.setNeedsDisplay()
         
         return cell
     }

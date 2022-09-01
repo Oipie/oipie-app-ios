@@ -31,6 +31,8 @@
 		A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */; };
 		A4CDD36028BF81B4007B3763 /* Recepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35F28BF81B4007B3763 /* Recepie.swift */; };
 		A4CDD36328BF822C007B3763 /* Recepies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD36228BF822C007B3763 /* Recepies.swift */; };
+		A4CDD36528BFBB97007B3763 /* RecepieCardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */; };
+		A4CDD36728BFC229007B3763 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -81,6 +83,8 @@
 		A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardInfoView.swift; sourceTree = "<group>"; };
 		A4CDD35F28BF81B4007B3763 /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
 		A4CDD36228BF822C007B3763 /* Recepies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepies.swift; sourceTree = "<group>"; };
+		A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardLabel.swift; sourceTree = "<group>"; };
+		A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 			children = (
 				A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */,
 				A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */,
+				A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 		CA9FA81128BCDF9E00942E23 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */,
 				CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Fonts;
@@ -512,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CDD36728BFC229007B3763 /* Montserrat-Regular.ttf in Resources */,
 				CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */,
 				A4645D8628B91EE800B7A665 /* LaunchScreen.storyboard in Resources */,
 				A4645D8328B91EE800B7A665 /* Assets.xcassets in Resources */,
@@ -541,6 +548,7 @@
 			files = (
 				A4645DCD28BE06EF00B7A665 /* SearchViewController.swift in Sources */,
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
+				A4CDD36528BFBB97007B3763 /* RecepieCardLabel.swift in Sources */,
 				A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
 				A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */,
