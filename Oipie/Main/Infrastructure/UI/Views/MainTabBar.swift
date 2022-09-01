@@ -19,10 +19,13 @@ class MainTabBar: UIStackView {
         self.init(frame: .zero)
 
         translatesAutoresizingMaskIntoConstraints = false
-        clipsToBounds = true
         backgroundColor = .themeWhite
         layer.cornerRadius = 45.0
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.17
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 10
         distribution = .fillEqually
 
         for i in 0 ..< controllers.count {

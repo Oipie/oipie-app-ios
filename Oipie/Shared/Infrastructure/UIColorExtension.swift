@@ -11,11 +11,11 @@ extension UIColor {
     class var themeViolet: UIColor {
         return UIColor(named: "Violet")!
     }
-    
+
     class var themeGray: UIColor {
         return UIColor(named: "Gray")!
     }
-    
+
     class var themeWhite: UIColor {
         return UIColor(named: "White")!
     }
@@ -30,4 +30,13 @@ enum FontSize: CGFloat {
     case small = 10.0
     case intermediate = 13.0
     case medium = 16.0
+}
+
+enum IconName: String {
+    case heartFill = "heart-fill"
+    case timer
+}
+
+func iconImage(_ name: IconName) -> UIImage? {
+    return UIImage(named: name.rawValue)
 }

@@ -17,6 +17,6 @@ class HomeTests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        expect(app).to(haveText("Pumpkin Soup"))
+        expect(app).to(haveText("PUMPKIN SOUP"))
     }
 }

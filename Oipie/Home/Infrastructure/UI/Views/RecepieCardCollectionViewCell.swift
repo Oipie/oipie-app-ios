@@ -5,34 +5,34 @@
 //  Created by Daniel Ramos on 31/8/22.
 //
 
-import UIKit
 import Kingfisher
+import UIKit
 
 class RecepieCardCollectionViewCell: UICollectionViewCell {
     static let identifier = "RecepieCardUICollectionViewCell"
-    
+
     let thumbnail: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.kf.setImage(with: URL(string: "https://i.imgur.com/ISxVZHA.png"))
         return image
     }()
-    
+
     let content: UIView = {
         let view = UIView(frame: .zero)
         view.clipsToBounds = true
         view.layer.cornerRadius = 40
         return view
     }()
-    
+
     let cardInfoView = RecepieCardInfoView(frame: .zero)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         backgroundColor = .themeWhite
         layer.cornerRadius = 40
-        
+
         addSubview(content)
         content.frame = bounds
         content.addSubview(thumbnail)
@@ -42,7 +42,7 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 0.17
         layer.shadowOffset = .zero
         layer.shadowRadius = 10
-        
+
         NSLayoutConstraint.activate([
             thumbnail.leadingAnchor.constraint(equalTo: content.leadingAnchor),
             thumbnail.trailingAnchor.constraint(equalTo: content.trailingAnchor),
@@ -54,11 +54,12 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
             cardInfoView.trailingAnchor.constraint(equalTo: content.trailingAnchor),
         ])
     }
-    
-    required init(coder: NSCoder) {
+
+    @available(*, unavailable)
+    required init(coder _: NSCoder) {
         fatalError()
     }
-    
+
     func configure(_ recepie: Recepie) {
         cardInfoView.configure(recepie)
         thumbnail.kf.setImage(with: URL(string: recepie.getCover()))
