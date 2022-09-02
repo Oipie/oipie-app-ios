@@ -22,7 +22,7 @@ class MainTabBarItem: UIButton {
 
     let label: UILabel = {
         let label = UILabel(frame: .zero)
-        label.font = UIFont(name: "Montserrat-SemiBold", size: 10.0)
+        label.font = UIFont(name: FontFamily.montserratSemiBold.rawValue, size: FontSize.small.rawValue)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .themeViolet
         label.textAlignment = .center

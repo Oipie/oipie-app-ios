@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42FBAD828C105B6009DF3E2 /* HomeUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAD728C105B6009DF3E2 /* HomeUseCases.swift */; };
+		A42FBADA28C10613009DF3E2 /* RecepieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAD928C10613009DF3E2 /* RecepieRepository.swift */; };
+		A42FBAE028C106BE009DF3E2 /* RecepieRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBADF28C106BE009DF3E2 /* RecepieRepositoryFake.swift */; };
+		A42FBAE228C1076D009DF3E2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAE128C1076D009DF3E2 /* HomePresenter.swift */; };
+		A42FBAE428C10784009DF3E2 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAE328C10784009DF3E2 /* HomeViewDelegate.swift */; };
+		A42FBAE828C10A0F009DF3E2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAE728C10A0F009DF3E2 /* ApiClient.swift */; };
+		A42FBAEB28C10A1F009DF3E2 /* ApiRecepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAEA28C10A1F009DF3E2 /* ApiRecepie.swift */; };
+		A42FBAED28C10AE0009DF3E2 /* ApiPaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAEC28C10AE0009DF3E2 /* ApiPaginatedResponse.swift */; };
+		A42FBAEF28C10B91009DF3E2 /* RecepieRepositoryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42FBAEE28C10B91009DF3E2 /* RecepieRepositoryApi.swift */; };
 		A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D7928B91EE600B7A665 /* AppDelegate.swift */; };
 		A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645D7B28B91EE600B7A665 /* SceneDelegate.swift */; };
 		A4645D8328B91EE800B7A665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4645D8228B91EE800B7A665 /* Assets.xcassets */; };
@@ -25,6 +34,14 @@
 		A4645DDB28BE0D9400B7A665 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DDA28BE0D9400B7A665 /* Nimble */; };
 		A4645DDE28BE0DA700B7A665 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DDD28BE0DA700B7A665 /* Nimble */; };
 		A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */; };
+		A4645DE628BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */; };
+		A4645DEB28BF648000B7A665 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A4645DEA28BF648000B7A665 /* Kingfisher */; };
+		A4CDD35B28BF79B6007B3763 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35A28BF79B6007B3763 /* HomeTests.swift */; };
+		A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */; };
+		A4CDD36028BF81B4007B3763 /* Recepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD35F28BF81B4007B3763 /* Recepie.swift */; };
+		A4CDD36328BF822C007B3763 /* Recepies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD36228BF822C007B3763 /* Recepies.swift */; };
+		A4CDD36528BFBB97007B3763 /* RecepieCardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */; };
+		A4CDD36728BFC229007B3763 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */; };
 		CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */; };
 		CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */; };
 		CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */; };
@@ -49,6 +66,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42FBAD728C105B6009DF3E2 /* HomeUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCases.swift; sourceTree = "<group>"; };
+		A42FBAD928C10613009DF3E2 /* RecepieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieRepository.swift; sourceTree = "<group>"; };
+		A42FBADF28C106BE009DF3E2 /* RecepieRepositoryFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieRepositoryFake.swift; sourceTree = "<group>"; };
+		A42FBAE128C1076D009DF3E2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		A42FBAE328C10784009DF3E2 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		A42FBAE728C10A0F009DF3E2 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A42FBAEA28C10A1F009DF3E2 /* ApiRecepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRecepie.swift; sourceTree = "<group>"; };
+		A42FBAEC28C10AE0009DF3E2 /* ApiPaginatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaginatedResponse.swift; sourceTree = "<group>"; };
+		A42FBAEE28C10B91009DF3E2 /* RecepieRepositoryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieRepositoryApi.swift; sourceTree = "<group>"; };
 		A4645D7628B91EE600B7A665 /* Oipie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oipie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4645D7928B91EE600B7A665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4645D7B28B91EE600B7A665 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +96,13 @@
 		A4645DE028BE0E4A00B7A665 /* CustomMatchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMatchers.swift; sourceTree = "<group>"; };
 		A4645DE228BE450E00B7A665 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4645DE328BE453500B7A665 /* TECH_DEBT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TECH_DEBT.md; sourceTree = "<group>"; };
+		A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4CDD35A28BF79B6007B3763 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardInfoView.swift; sourceTree = "<group>"; };
+		A4CDD35F28BF81B4007B3763 /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
+		A4CDD36228BF822C007B3763 /* Recepies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepies.swift; sourceTree = "<group>"; };
+		A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCardLabel.swift; sourceTree = "<group>"; };
+		A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		CA9FA80D28BCCFB300942E23 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CA9FA80F28BCD28500942E23 /* MainTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarItem.swift; sourceTree = "<group>"; };
 		CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -81,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4645DEB28BF648000B7A665 /* Kingfisher in Frameworks */,
 				A4645DD628BE07F600B7A665 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +138,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42FBAD628C105A6009DF3E2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				A42FBAD728C105B6009DF3E2 /* HomeUseCases.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		A42FBADB28C10652009DF3E2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A42FBADE28C106A7009DF3E2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A42FBADF28C106BE009DF3E2 /* RecepieRepositoryFake.swift */,
+				A42FBAEE28C10B91009DF3E2 /* RecepieRepositoryApi.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A42FBAE528C109E8009DF3E2 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				A42FBAE628C109EE009DF3E2 /* API */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		A42FBAE628C109EE009DF3E2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A42FBAE928C10A13009DF3E2 /* models */,
+				A42FBAE728C10A0F009DF3E2 /* ApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A42FBAE928C10A13009DF3E2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A42FBAEA28C10A1F009DF3E2 /* ApiRecepie.swift */,
+				A42FBAEC28C10AE0009DF3E2 /* ApiPaginatedResponse.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		A4645D6D28B91EE500B7A665 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A4645DDF28BE0E4000B7A665 /* utils */,
+				A4CDD35A28BF79B6007B3763 /* HomeTests.swift */,
 				A4645D9A28B91EE800B7A665 /* MainNavigationTests.swift */,
 			);
 			path = OipieUITests;
@@ -174,24 +259,29 @@
 		A4645DB628BE058100B7A665 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A4645DB728BE059B00B7A665 /* infrastructure */,
+				A42FBADB28C10652009DF3E2 /* Domain */,
+				A4645DB728BE059B00B7A665 /* Infrastructure */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		A4645DB728BE059B00B7A665 /* infrastructure */ = {
+		A4645DB728BE059B00B7A665 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				A42FBAE528C109E8009DF3E2 /* Datasources */,
+				A4CDD36128BF8220007B3763 /* Fixtures */,
 				CA9FA81128BCDF9E00942E23 /* Fonts */,
 				CABE897428BDF70700EC9277 /* UIColorExtension.swift */,
 				A4645DD728BE080E00B7A665 /* AppFactory.swift */,
 			);
-			path = infrastructure;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		A4645DB828BE05C000B7A665 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A42FBAD628C105A6009DF3E2 /* UseCases */,
+				A4CDD35E28BF81A7007B3763 /* Domain */,
 				A4645DBD28BE062100B7A665 /* Infrastructure */,
 			);
 			path = Home;
@@ -232,6 +322,7 @@
 		A4645DBD28BE062100B7A665 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				A42FBADE28C106A7009DF3E2 /* Repositories */,
 				A4645DC228BE063800B7A665 /* UI */,
 			);
 			path = Infrastructure;
@@ -274,7 +365,10 @@
 		A4645DC228BE063800B7A665 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A4645DE428BF559200B7A665 /* Views */,
 				A4645DCA28BE06A100B7A665 /* HomeViewController.swift */,
+				A42FBAE128C1076D009DF3E2 /* HomePresenter.swift */,
+				A42FBAE328C10784009DF3E2 /* HomeViewDelegate.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -343,9 +437,37 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		A4645DE428BF559200B7A665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4645DE528BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift */,
+				A4CDD35C28BF7A0D007B3763 /* RecepieCardInfoView.swift */,
+				A4CDD36428BFBB97007B3763 /* RecepieCardLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4CDD35E28BF81A7007B3763 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDD35F28BF81B4007B3763 /* Recepie.swift */,
+				A42FBAD928C10613009DF3E2 /* RecepieRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A4CDD36128BF8220007B3763 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				A4CDD36228BF822C007B3763 /* Recepies.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		CA9FA81128BCDF9E00942E23 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				A4CDD36628BFC229007B3763 /* Montserrat-Regular.ttf */,
 				CA9FA81628BCE24E00942E23 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Fonts;
@@ -369,6 +491,7 @@
 			name = Oipie;
 			packageProductDependencies = (
 				A4645DD528BE07F600B7A665 /* Swinject */,
+				A4645DEA28BF648000B7A665 /* Kingfisher */,
 			);
 			productName = Oipie;
 			productReference = A4645D7628B91EE600B7A665 /* Oipie.app */;
@@ -452,6 +575,7 @@
 				A4645DD428BE07F600B7A665 /* XCRemoteSwiftPackageReference "Swinject" */,
 				A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */,
 				A4645DDC28BE0DA700B7A665 /* XCRemoteSwiftPackageReference "Nimble" */,
+				A4645DE928BF648000B7A665 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A4645D7728B91EE600B7A665 /* Products */;
 			projectDirPath = "";
@@ -469,6 +593,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CDD36728BFC229007B3763 /* Montserrat-Regular.ttf in Resources */,
 				CA9FA81728BCE24E00942E23 /* Montserrat-SemiBold.ttf in Resources */,
 				A4645D8628B91EE800B7A665 /* LaunchScreen.storyboard in Resources */,
 				A4645D8328B91EE800B7A665 /* Assets.xcassets in Resources */,
@@ -498,17 +623,31 @@
 			files = (
 				A4645DCD28BE06EF00B7A665 /* SearchViewController.swift in Sources */,
 				A4645D7A28B91EE600B7A665 /* AppDelegate.swift in Sources */,
+				A4CDD36528BFBB97007B3763 /* RecepieCardLabel.swift in Sources */,
 				A4645DCF28BE06FF00B7A665 /* FavouritesViewController.swift in Sources */,
 				A4645DAC28B920D300B7A665 /* MainTabBarController.swift in Sources */,
+				A4CDD35D28BF7A0D007B3763 /* RecepieCardInfoView.swift in Sources */,
+				A4CDD36028BF81B4007B3763 /* Recepie.swift in Sources */,
+				A42FBADA28C10613009DF3E2 /* RecepieRepository.swift in Sources */,
+				A42FBAD828C105B6009DF3E2 /* HomeUseCases.swift in Sources */,
+				A42FBAEB28C10A1F009DF3E2 /* ApiRecepie.swift in Sources */,
 				CA9FA80E28BCCFB300942E23 /* MainTabBar.swift in Sources */,
+				A42FBAED28C10AE0009DF3E2 /* ApiPaginatedResponse.swift in Sources */,
+				A42FBAE028C106BE009DF3E2 /* RecepieRepositoryFake.swift in Sources */,
+				A42FBAE828C10A0F009DF3E2 /* ApiClient.swift in Sources */,
 				A4645DAA28B91F3A00B7A665 /* main.swift in Sources */,
 				A4645DD828BE080E00B7A665 /* AppFactory.swift in Sources */,
 				A4645DCB28BE06A100B7A665 /* HomeViewController.swift in Sources */,
+				A42FBAEF28C10B91009DF3E2 /* RecepieRepositoryApi.swift in Sources */,
 				CA9FA81028BCD28500942E23 /* MainTabBarItem.swift in Sources */,
 				CABE897528BDF70700EC9277 /* UIColorExtension.swift in Sources */,
+				A4645DE628BF55FD00B7A665 /* RecepieCardCollectionViewCell.swift in Sources */,
 				A4645DD328BE075700B7A665 /* ProfileViewController.swift in Sources */,
 				A4645DD128BE071800B7A665 /* MyRecepiesViewController.swift in Sources */,
+				A4CDD36328BF822C007B3763 /* Recepies.swift in Sources */,
 				A4645D7C28B91EE600B7A665 /* SceneDelegate.swift in Sources */,
+				A42FBAE228C1076D009DF3E2 /* HomePresenter.swift in Sources */,
+				A42FBAE428C10784009DF3E2 /* HomeViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4645D9B28B91EE800B7A665 /* MainNavigationTests.swift in Sources */,
+				A4CDD35B28BF79B6007B3763 /* HomeTests.swift in Sources */,
 				A4645DE128BE0E4A00B7A665 /* CustomMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,6 +1008,14 @@
 				version = 10.0.0;
 			};
 		};
+		A4645DE928BF648000B7A665 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -885,6 +1033,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4645DD928BE0D9400B7A665 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
+		};
+		A4645DEA28BF648000B7A665 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4645DE928BF648000B7A665 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
