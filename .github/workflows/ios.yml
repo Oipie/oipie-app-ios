@@ -1,4 +1,4 @@
-name: iOS
+name: iOS workflow
 
 on:
   push:
