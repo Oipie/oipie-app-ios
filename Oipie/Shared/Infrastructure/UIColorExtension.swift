@@ -35,9 +35,9 @@ enum FontSize: CGFloat {
 enum IconName: String {
     case heartFill = "heart-fill"
     case timer
-    case home = "home"
-    case search = "search"
-    case heart = "heart"
+    case home
+    case search
+    case heart
     case pageFlip = "page-flip"
     case profileCircled = "profile-circled"
 }

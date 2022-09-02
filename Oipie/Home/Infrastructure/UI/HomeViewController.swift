@@ -67,7 +67,7 @@ extension HomeViewController: HomeViewDelegate {
             self.collection.reloadData()
         }
     }
-    
+
     func addRecepies(_ recepies: [Recepie]) {
         self.recepies.append(contentsOf: recepies)
 
