@@ -12,7 +12,11 @@ import Swinject
 class HomePresenter {
     private weak var homeView: HomeViewDelegate?
     let homeUseCases: HomeUseCases
-    private var cancellable: AnyCancellable?
+    
+    private var cancellable1: AnyCancellable?
+    private var cancellable2: AnyCancellable?
+    
+    private var needMoreRecepiesSubject = PassthroughSubject<Int, Error>()
 
     public static func build(_ resolver: Resolver) -> HomePresenter {
         let delegate = resolver.resolve(HomeViewDelegate.self)!
@@ -23,10 +27,23 @@ class HomePresenter {
     init(delegate: HomeViewDelegate?, homeUseCases: HomeUseCases) {
         homeView = delegate
         self.homeUseCases = homeUseCases
+        
+        cancellable2 = needMoreRecepiesSubject
+            .throttle(for: 2.0, scheduler: RunLoop.main, latest: false)
+            .flatMap { homeUseCases.loadMoreRecepiesFrom(offset: $0) }
+            .catch { error -> AnyPublisher<[Recepie], Never> in
+                print("This is the error \(error)")
+                return Empty(completeImmediately: true).eraseToAnyPublisher()
+            }
+            .sink(
+                receiveValue: { [weak self] recepies in
+                    self?.homeView?.addRecepies(recepies)
+                }
+            )
     }
 
     func loadRecepies() {
-        cancellable = homeUseCases.getRecepies()
+        cancellable1 = homeUseCases.getRecepies()
             .catch { error -> AnyPublisher<[Recepie], Never> in
                 print("This is the error \(error)")
                 return Empty(completeImmediately: true).eraseToAnyPublisher()
@@ -36,5 +53,9 @@ class HomePresenter {
                     self?.homeView?.presentRecepies(recepies)
                 }
             )
+    }
+    
+    func loadMoreRecepies(_ offset: Int) {
+        needMoreRecepiesSubject.send(offset)
     }
 }

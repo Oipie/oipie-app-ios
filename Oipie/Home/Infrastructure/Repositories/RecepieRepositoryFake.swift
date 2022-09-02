@@ -5,6 +5,7 @@
 //  Created by Daniel Ramos on 1/9/22.
 //
 
+import Foundation
 import Combine
 import Swinject
 
@@ -14,13 +15,13 @@ class RecepieRepositoryFake: RecepieRepository {
             name: PUMPKIN_SOUP.name,
             cover: PUMPKIN_SOUP.cover,
             favouriteAmount: PUMPKIN_SOUP.favouriteAmount,
-            preparationTime: PUMPKIN_SOUP.preparationTimeSeconds
+            preparationTime: TimeInterval(PUMPKIN_SOUP.preparationTimeSeconds)
         ),
         Recepie(
             name: FRENCH_TOAST.name,
             cover: FRENCH_TOAST.cover,
             favouriteAmount: FRENCH_TOAST.favouriteAmount,
-            preparationTime: FRENCH_TOAST.preparationTimeSeconds
+            preparationTime: TimeInterval(FRENCH_TOAST.preparationTimeSeconds)
         ),
     ]
 

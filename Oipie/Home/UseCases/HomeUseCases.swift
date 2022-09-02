@@ -25,4 +25,8 @@ class HomeUseCases {
     func getRecepies() -> AnyPublisher<[Recepie], Error> {
         return recepieRepository.find(limit: 3, offset: 0)
     }
+    
+    func loadMoreRecepiesFrom(offset: Int) -> AnyPublisher<[Recepie], Error> {
+        return recepieRepository.find(limit: 3, offset: offset)
+    }
 }

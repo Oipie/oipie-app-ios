@@ -67,6 +67,14 @@ extension HomeViewController: HomeViewDelegate {
             self.collection.reloadData()
         }
     }
+    
+    func addRecepies(_ recepies: [Recepie]) {
+        self.recepies.append(contentsOf: recepies)
+
+        DispatchQueue.main.async {
+            self.collection.reloadData()
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -78,7 +86,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         if offsetY > contentHeight - scrollView.frame.size.height {
-            print("this is end, see you in console")
+            presenter?.loadMoreRecepies(recepies.count)
         }
     }
 

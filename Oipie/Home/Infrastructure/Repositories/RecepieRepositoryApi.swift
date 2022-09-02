@@ -24,7 +24,7 @@ class RecepieRepositoryApi: RecepieRepository {
                 $0
                     .map {
                         Recepie(name: $0.name, cover: $0.cover, favouriteAmount: $0.favouriteAmount,
-                                preparationTime: $0.preparationTime / 1000)
+                                preparationTime: TimeInterval($0.preparationTime / 1000))
                     }
             }
             .eraseToAnyPublisher()

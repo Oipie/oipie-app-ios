@@ -15,7 +15,6 @@ class RecepieCardCollectionViewCell: UICollectionViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
-        image.kf.setImage(with: URL(string: "https://i.imgur.com/ISxVZHA.png"))
         return image
     }()
 

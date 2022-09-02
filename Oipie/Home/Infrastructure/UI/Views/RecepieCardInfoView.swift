@@ -41,10 +41,6 @@ class RecepieCardInfoView: UIView {
         content.addSubview(favouriteAndTimeContainer)
         addSubview(content)
 
-        // favouriteAndTimeContainer.backgroundColor = .systemYellow
-        // content.backgroundColor = .systemGreen
-        // self.backgroundColor = .gray
-
         NSLayoutConstraint.activate([
             content.centerXAnchor.constraint(equalTo: centerXAnchor),
             content.centerYAnchor.constraint(equalTo: centerYAnchor),

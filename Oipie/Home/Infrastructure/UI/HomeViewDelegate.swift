@@ -7,4 +7,5 @@
 
 protocol HomeViewDelegate: AnyObject {
     func presentRecepies(_ recepies: [Recepie])
+    func addRecepies(_ recepies: [Recepie])
 }

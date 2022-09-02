@@ -11,9 +11,9 @@ class Recepie {
     private let name: String
     private let cover: String
     private let favouriteAmount: Int
-    private let preparationTime: Int
+    private let preparationTime: TimeInterval
 
-    init(name: String, cover: String, favouriteAmount: Int, preparationTime: Int) {
+    init(name: String, cover: String, favouriteAmount: Int, preparationTime: TimeInterval) {
         self.name = name
         self.cover = cover
         self.favouriteAmount = favouriteAmount
@@ -33,13 +33,11 @@ class Recepie {
     }
 
     func getPreparationTimeFormatted() -> String {
-        let duration = TimeInterval(preparationTime) // 2 minutes, 30 seconds
-
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .brief
         formatter.allowedUnits = [.hour, .minute]
 
-        let formattedDuration = formatter.string(from: duration)
+        let formattedDuration = formatter.string(from: preparationTime)
 
         return formattedDuration ?? String(favouriteAmount)
     }

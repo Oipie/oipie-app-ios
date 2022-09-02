@@ -27,7 +27,6 @@ class RecepieCardLabel: UIView {
     let valueLabel: UILabel = {
         let value = UILabel()
         value.translatesAutoresizingMaskIntoConstraints = false
-        value.text = "245"
         value.font = UIFont(name: FontFamily.montserratRegular.rawValue, size: FontSize.intermediate.rawValue)
         value.textColor = .label
         return value
@@ -58,7 +57,7 @@ class RecepieCardLabel: UIView {
 
     convenience init(icon: IconName) {
         self.init(frame: .zero)
-        iconImageView.image = iconImage(icon)
+        iconImageView.image = UIImage(icon: icon)
     }
 
     @available(*, unavailable)

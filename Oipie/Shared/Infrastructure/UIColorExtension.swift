@@ -35,8 +35,15 @@ enum FontSize: CGFloat {
 enum IconName: String {
     case heartFill = "heart-fill"
     case timer
+    case home = "home"
+    case search = "search"
+    case heart = "heart"
+    case pageFlip = "page-flip"
+    case profileCircled = "profile-circled"
 }
 
-func iconImage(_ name: IconName) -> UIImage? {
-    return UIImage(named: name.rawValue)
+extension UIImage {
+    convenience init?(icon: IconName) {
+        self.init(named: icon.rawValue)
+    }
 }

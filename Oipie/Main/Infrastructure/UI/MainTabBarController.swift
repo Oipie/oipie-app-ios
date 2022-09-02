@@ -60,11 +60,11 @@ class MainTabBarController: UITabBarController {
         let vc4 = UINavigationController(rootViewController: myRecepiesViewController)
         let vc5 = UINavigationController(rootViewController: profileViewController)
 
-        vc1.tabBarItem.image = UIImage(named: "home")
-        vc2.tabBarItem.image = UIImage(named: "search")
-        vc3.tabBarItem.image = UIImage(named: "heart")
-        vc4.tabBarItem.image = UIImage(named: "page-flip")
-        vc5.tabBarItem.image = UIImage(named: "profile-circled")
+        vc1.tabBarItem.image = UIImage(icon: .home)
+        vc2.tabBarItem.image = UIImage(icon: .search)
+        vc3.tabBarItem.image = UIImage(icon: .heart)
+        vc4.tabBarItem.image = UIImage(icon: .pageFlip)
+        vc5.tabBarItem.image = UIImage(icon: .profileCircled)
 
         vc1.title = "Home"
         vc2.title = "Search"
