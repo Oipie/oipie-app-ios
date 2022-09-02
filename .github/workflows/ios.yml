@@ -1,10 +1,10 @@
-name: iOS workflow
+name: iOS
 
 on:
   push:
     branches: ["main"]
   pull_request:
-    branches: ["main"]
+    branches: ["*"]
 
 jobs:
   lint:
