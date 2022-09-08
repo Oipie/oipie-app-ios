@@ -1,0 +1,5 @@
+# By default ios developers do review
+* @Oipie/ios
+
+# CICD and infrastructure files
+.github @Oipie/sre
