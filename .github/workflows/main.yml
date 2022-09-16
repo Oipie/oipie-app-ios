@@ -94,6 +94,7 @@ jobs:
         uses: einaregilsson/build-number@v3
         with:
           token: ${{ secrets.github_token }}
+      - run: security list-keychains
       - run: ./Build
       - uses: Apple-Actions/upload-testflight-build@v1
         with:
