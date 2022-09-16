@@ -82,8 +82,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: Apple-Actions/import-codesign-certs@v1
         with:
-          p12-file-base64: ${{ secrets.CERTIFICATES_FILE_BASE64 }}
-          p12-password: ${{ secrets.CERTIFICATES_PASSWORD }}
+          p12-file-base64: ${{ secrets.CERTIFICATES_FILE_BASE64_DEVELOPMENT }}
+          p12-password: ${{ secrets.CERTIFICATES_PASSWORD_DEVELOPMENT }}
       - uses: Apple-Actions/download-provisioning-profiles@v1
         with:
           bundle-id: com.acidtango.oipie
