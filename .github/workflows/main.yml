@@ -91,12 +91,11 @@ jobs:
           api-key-id: ${{ secrets.APPSTORE_KEY_ID }}
           api-private-key: ${{ secrets.APPSTORE_PRIVATE_KEY }}
       - name: "#️⃣ Generate Build Number"
-        id: buildnumber
-        uses: einaregilsson/build-number@v2
+        uses: einaregilsson/build-number@v3
         with:
           token: ${{ secrets.github_token }}
       - run: ./Build
-      - uses: Apple-Actions/upload-testflight-build@master
+      - uses: Apple-Actions/upload-testflight-build@v1
         with:
           app-path: .build/Artifacts/Oipie.ipa/Oipie.ipa
           issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
